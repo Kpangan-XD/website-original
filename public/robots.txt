@@ -1,0 +1,5 @@
+# Inpianda Center
+User-agent: *
+Allow: /
+
+Sitemap: https://inpianda.dev/sitemap.xml

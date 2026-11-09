@@ -1,0 +1,72 @@
+<article class="hero">
+  <div class="container hero-content">
+    <div>
+      <header class="profile-header" style="display: flex; align-items: center; gap: var(--space-6); margin-bottom: var(--space-8); flex-wrap: wrap;">
+        <img src="/assets/images/profile.svg" alt="Inpianda Software Foundation" class="profile-img" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 3px solid var(--color-primary);">
+        <div>
+          <h1 class="hero-title" style="font-size: clamp(2rem, 5vw, 3.5rem);">The <span class="highlight">Inpianda Software Foundation</span> (ISF)</h1>
+          <p class="hero-subtitle" style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-top: var(--space-2);">Software pioneer from Indonesia producing outstanding low-level works.</p>
+        </div>
+      </header>
+      <p class="hero-description" style="max-width: 60ch;">Inpianda focuses on low-level <strong>back-end</strong> programming—specifically <strong>C/C++</strong> and assembly—with front-end work limited to the development of this main website. Ready for collaboration!</p>
+      <div class="hero-actions" style="margin-top: var(--space-8);">
+        <a href="/projects" class="btn btn-primary btn-lg">View Portfolio</a>
+        <a href="/about" class="btn btn-secondary btn-lg">About Me</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="card" style="aspect-ratio: 4/3; border-radius: var(--radius-xl); overflow: hidden; background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-light) 100%); display: flex; align-items: center; justify-content: center; position: relative;">
+        <img src="/assets/images/logo.svg" alt="ISF Logo" style="width: 160px; height: 160px; opacity: 0.3;">
+      </div>
+    </div>
+  </div>
+</article>
+
+<section class="section bg-tertiary">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-badge badge badge-primary">Portfolio</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-description">Low-level systems and compiler projects in active development.</p>
+    </header>
+    <div class="projects-grid" id="featured-projects">
+      <!-- Rendered by JS -->
+    </div>
+    <div class="text-center mt-8">
+      <a href="/projects" class="btn btn-outline btn-lg">View All Projects</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <header class="section-header">
+      <span class="section-badge badge badge-accent">Focus Areas</span>
+      <h2 class="section-title">What I Do</h2>
+      <p class="section-description">Specialized in systems programming and compiler construction.</p>
+    </header>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <article class="card p-6">
+        <div class="avatar bg-brand-light text-brand mb-4" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Compiler Construction</h3>
+        <p class="text-secondary">Building C+ language compiler — a hybrid of C and C++ with custom toolchain.</p>
+      </article>
+      <article class="card p-6">
+        <div class="avatar bg-accent-light text-accent mb-4" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Operating Systems</h3>
+        <p class="text-secondary">32-bit protected mode OS with VGA color graphics (Inpianda OS).</p>
+      </article>
+      <article class="card p-6">
+        <div class="avatar bg-success-light text-success mb-4" aria-hidden="true">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Embedded Systems</h3>
+        <p class="text-secondary">ESP-32 and microcontroller programming for low-level hardware control.</p>
+      </article>
+    </div>
+  </div>
+</section>

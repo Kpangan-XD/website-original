@@ -1,0 +1,59 @@
+<header class="hero" style="padding: var(--space-12) 0;">
+  <div class="container">
+    <h1 class="text-4xl font-bold text-center mb-4">Settings</h1>
+    <p class="text-lg text-secondary text-center max-w-2xl mx-auto">Preferences and configuration.</p>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="card p-8 max-w-2xl mx-auto">
+      <h2 class="text-xl font-semibold mb-6">Appearance</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-medium">Dark Mode</h3>
+            <p class="text-sm text-secondary">Follow system preference or manual toggle</p>
+          </div>
+          <button class="theme-toggle" aria-label="Toggle dark mode" data-theme-toggle style="width: 2.5rem; height: 2.5rem;">
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+        <div class="divider"></div>
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-medium">Reduced Motion</h3>
+            <p class="text-sm text-secondary">Disable animations (follows system setting)</p>
+          </div>
+          <span class="badge badge-secondary">Auto</span>
+        </div>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-8 mb-6">Data & Privacy</h2>
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-medium">Local Storage</h3>
+            <p class="text-sm text-secondary">Theme, preferences cached locally</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="localStorage.clear(); location.reload()">Clear</button>
+        </div>
+        <div class="flex items-center justify-between">
+          <div>
+            <h3 class="font-medium">Service Worker</h3>
+            <p class="text-sm text-secondary">Offline cache, background sync</p>
+          </div>
+          <button class="btn btn-secondary btn-sm" onclick="navigator.serviceWorker.getRegistrations().then(regs => regs.forEach(r => r.unregister()))">Unregister</button>
+        </div>
+      </div>
+
+      <h2 class="text-xl font-semibold mt-8 mb-6">About</h2>
+      <div class="text-secondary text-sm space-y-1">
+        <p>Inpianda Center v2.0</p>
+        <p>Built with TypeScript, Vite, PWA</p>
+        <p>&copy; {{year}} Inpianda Software Foundation</p>
+      </div>
+    </div>
+  </div>
+</section>

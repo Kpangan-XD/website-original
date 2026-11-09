@@ -1,0 +1,26 @@
+<header class="hero" style="padding: var(--space-12) 0;">
+  <div class="container">
+    <h1 class="text-4xl font-bold text-center mb-4">Portfolio</h1>
+    <p class="text-lg text-secondary text-center max-w-2xl mx-auto mb-8">Low-level systems projects: compilers, operating systems, and embedded tools.</p>
+    <div class="projects-filter" role="group" aria-label="Filter projects by category">
+      <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="compiler" aria-pressed="false">Compilers</button>
+      <button class="filter-btn" data-filter="os" aria-pressed="false">Operating Systems</button>
+      <button class="filter-btn" data-filter="tools" aria-pressed="false">Tools</button>
+      <button class="filter-btn" data-filter="experiments" aria-pressed="false">Experiments</button>
+    </div>
+  </div>
+</header>
+
+<section class="section">
+  <div class="container">
+    <div class="projects-grid" id="projects-grid" role="list" aria-label="Projects list">
+      <!-- Rendered by JS -->
+    </div>
+    <div id="no-results" class="hidden text-center py-12">
+      <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="var(--color-text-tertiary)" stroke-width="1.5" class="mx-auto mb-4" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <h3 class="text-xl font-semibold mb-2">No projects found</h3>
+      <p class="text-secondary">Try changing your filter or search term.</p>
+    </div>
+  </div>
+</section>

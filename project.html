@@ -1,0 +1,24 @@
+{{! Project page entry }}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}} | Inpianda Center</title>
+  <meta name="description" content="{{description}}">
+  <meta name="theme-color" content="#1a1a2e">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <script type="application/ld+json">{{json structuredData}}</script>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  {{> header }}
+  <main id="main-content" role="main">
+    {{> project }}
+  </main>
+  {{> footer }}
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
