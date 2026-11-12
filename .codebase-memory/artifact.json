@@ -1,0 +1,11 @@
+{
+    "schema_version": 2,
+    "commit": "7bc42bdfcd4043e4778d1b909a3f23b5cb236794",
+    "indexed_at": "2026-11-12T12:57:43Z",
+    "project": "website",
+    "nodes": 180,
+    "edges": 304,
+    "original_size": 2752512,
+    "compressed_size": 213216,
+    "compression_level": 9
+}

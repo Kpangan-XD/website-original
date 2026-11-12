@@ -20,5 +20,12 @@
   </main>
   {{> footer }}
   <script type="module" src="/src/main.ts"></script>
+
+  <!-- Register Service Worker -->
+  <script type="module">
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js').catch(() => {});
+    }
+  </script>
 </body>
 </html>

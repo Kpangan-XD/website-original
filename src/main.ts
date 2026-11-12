@@ -11,6 +11,7 @@ import { initFormValidation } from './scripts/components/form-validation';
 import { initProjectFilters } from './scripts/components/project-filters';
 import { initLazyImages } from './scripts/components/lazy-images';
 import { initScrollSpy } from './scripts/components/scroll-spy';
+import { initSmoothScroll } from './scripts/components/scroll-spy';
 
 // Initialize all components when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilters();
   initLazyImages();
   initScrollSpy();
+  initSmoothScroll();
 
   // Announce page load for screen readers
   const announcement = document.createElement('div');

@@ -32,6 +32,7 @@
     "workbox-strategies": "^7.4.1"
   },
   "dependencies": {
-    "@vercel/speed-insights": "^2.0.0"
+    "@vercel/speed-insights": "^2.0.0",
+    "nodemailer": "^6.9.0"
   }
 }

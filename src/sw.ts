@@ -7,25 +7,13 @@
 declare const self: ServiceWorkerGlobalScope;
 import { precacheAndRoute, cleanupOutdatedCaches } from 'workbox-precaching';
 import { registerRoute } from 'workbox-routing';
-import { NetworkFirst, CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
+import { CacheFirst, StaleWhileRevalidate } from 'workbox-strategies';
 import { ExpirationPlugin } from 'workbox-expiration';
 import { CacheableResponsePlugin } from 'workbox-cacheable-response';
 
 // self.__WB_MANIFEST is injected by workbox-build
 precacheAndRoute(self.__WB_MANIFEST);
 cleanupOutdatedCaches();
-
-// Navigation fallback for SPA-like behavior (optional)
-registerRoute(
-  ({ request }) => request.mode === 'navigate',
-  new NetworkFirst({
-    cacheName: 'pages-cache',
-    plugins: [
-      new ExpirationPlugin({ maxEntries: 50, maxAgeSeconds: 60 * 60 * 24 * 30 }),
-      new CacheableResponsePlugin({ statuses: [0, 200] }),
-    ],
-  })
-);
 
 // Fonts caching
 registerRoute(

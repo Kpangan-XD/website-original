@@ -121,7 +121,7 @@ export default defineConfig({
       strategies: 'injectManifest',
       srcDir: 'src',
       filename: 'sw.ts',
-      includeAssets: ['favicon.ico', 'robots.txt', 'apple-touch-icon.png'],
+      includeAssets: ['robots.txt', 'apple-touch-icon.png'],
       manifest: {
         name: 'Inpianda Center',
         short_name: 'Inpianda',

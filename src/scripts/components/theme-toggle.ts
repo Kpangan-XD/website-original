@@ -23,8 +23,8 @@ function getStoredTheme(): Theme {
 }
 
 export function initTheme(): void {
-  const toggle = document.querySelector<HTMLButtonElement>('[data-theme-toggle]');
-  if (!toggle) return;
+  const toggles = document.querySelectorAll<HTMLButtonElement>('[data-theme-toggle]');
+  if (!toggles.length) return;
 
   // Apply initial theme
   const stored = getStoredTheme();
@@ -36,24 +36,27 @@ export function initTheme(): void {
     const current = getStoredTheme();
     if (current === SYSTEM_THEME) {
       applyTheme(SYSTEM_THEME);
-      updateToggleIcon();
+      updateAllToggleIcons();
     }
   });
 
-  // Toggle handler
-  toggle.addEventListener('click', () => {
-    const current = getStoredTheme();
-    const next: Theme = current === 'light' ? 'dark' : current === 'dark' ? SYSTEM_THEME : 'light';
-    applyTheme(next);
-    updateToggleIcon();
+  // Toggle handler for each toggle button
+  toggles.forEach(toggle => {
+    toggle.addEventListener('click', () => {
+      const current = getStoredTheme();
+      const next: Theme = current === 'light' ? 'dark' : current === 'dark' ? SYSTEM_THEME : 'light';
+      applyTheme(next);
+      updateAllToggleIcons();
+    });
   });
 
-  function updateToggleIcon(): void {
-    if (!toggle) return;
+  function updateAllToggleIcons(): void {
     const current = getStoredTheme();
     const resolved = current === SYSTEM_THEME ? getSystemTheme() : current;
-    toggle.setAttribute('aria-label', resolved === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    toggles.forEach(toggle => {
+      toggle.setAttribute('aria-label', resolved === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+    });
   }
 
-  updateToggleIcon();
+  updateAllToggleIcons();
 }
